@@ -33,4 +33,4 @@ USER jovyan
 RUN pip install --no-cache-dir networkx scipy
 
 # Override command to disable running jupyter notebook at launch
-# CMD ["/bin/bash"]
+CMD ["/bin/bash"]
