@@ -27,11 +27,10 @@ RUN java --version && \
     npm --version
 
 # 3) install packages using notebook user
-# USER jovyan
+USER jovyan
 
 # RUN conda install -y scikit-learn
-
-# RUN pip install --no-cache-dir networkx scipy
+RUN pip install --no-cache-dir networkx scipy
 
 # Override command to disable running jupyter notebook at launch
 # CMD ["/bin/bash"]
