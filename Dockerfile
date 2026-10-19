@@ -13,7 +13,11 @@ LABEL maintainer="UC San Diego ITS/ETS <ets-consult@ucsd.edu>"
 # 2) change to root to install packages
 USER root
 
-RUN apt-get -y install default-jdk maven git git \
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        default-jdk \
+        maven \
+        git \
     && rm -rf /var/lib/apt/lists/*
 
 RUN java --version && \
